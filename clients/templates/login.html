@@ -1,0 +1,12 @@
+<h3>Hola Login</h3>
+{% if message %}
+  <p style="color:red;">{{ message }}</p>
+{% endif%}
+
+<form class="" action="" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="LogIn">
+</form>
+
+<a href="{% url 'clients:create' %}">Registrarse</a>
